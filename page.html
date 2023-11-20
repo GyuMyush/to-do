@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>toDo</title>
+</head>
+<body>
+    <main class="todo">
+        <!-- шапка + лого -->
+        <section class="todo__heading">
+            <img class="todo__heading_logo" src="assets/logo.svg" alt="logo">
+            <span class="todo__heading_text">to-do list</span>
+        </section>
+        <!-- контейнер со списком -->
+        <section clas="todo__content">
+                <div class="todo__List">
+                    <!-- тудушка -->
+                    <div class="todo__items">
+                        <span class="todo__itemsNum">1</span>
+                        <span class="todo__itemsName">первое дело</span>
+                        <div class="todo__itemsButton">
+                            <button class="todo__itemsButton-yes">&#9989;</button>
+                            <button class="todo__itemsButton-no">&#10060;</button>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <!-- кнопка добавления -->
+        <div class="todo__buttonAdd">
+            <button class="todo__buttonShow"></button>
+        </div>
+    </main>
+
+    <dialog class="todo__popup">
+        <div class="todo__popupInner">
+            <span>Введите новое задание</span>
+            <button class="todo__buttonClose" metod>close</button>
+        </div>
+    </dialog>
+
+    <script src="index.js"></script>
+</body>
+</html>

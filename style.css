@@ -1,0 +1,141 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --Background-color: #eeeeee;
+    --Effect-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10), -4px -4px 15px 0px #FFF;
+    --Effect-shadow-hover: 4px 4px 10px 0px rgba(0, 0, 0, 0.10), -4px -4px 15px 0px #F4DCFF;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--Background-color);
+}
+
+.todo__heading_logo {
+    box-shadow: var(--Effect-shadow);
+    border-radius: 35px;
+    width: 100px;
+    height: 100px;
+}
+
+.todo,
+.todo__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+} 
+
+.todo {
+    margin: auto;
+    margin-top: 50px;
+    min-width: 530px
+
+}
+
+.todo__heading_text {
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.todo__List {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+.todo__items {
+    width: 428px;
+    background-color: #FFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 50px;
+    padding: 10px 22px;
+}
+
+.todo__items {
+    transition: .5s;
+    box-shadow: var(--Effect-shadow);
+}
+
+.todo__items:hover {
+    transition: .5s;
+    box-shadow: var(--Effect-shadow-hover);
+}
+
+.todo__itemsNum {
+    text-align: center;
+    font-size: 32px;
+}
+
+.todo__itemsButton {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.todo__itemsButton-yes,
+.todo__itemsButton-no {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    background-color: #FFF;
+}
+
+
+.todo__buttonShow{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-image: url('assets/add.svg');
+    background-size: cover;
+}
+
+.todo__buttonShow:hover,
+.todo__itemsButton-yes:hover,
+.todo__itemsButton-no:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.todo__buttonShow:active,
+.todo__itemsButton-yes:active,
+.todo__itemsButton-no:active {
+    transform: scale(0.90);
+}
+
+/* основные стили для всех диалоговых окон */
+
+.todo__popup {
+    border: none;
+    padding: 0;
+    border-radius: 40px;
+}
+
+.todo__popupInner {
+    padding: 20px 50px;
+
+    border: 0px;
+    border-radius: 40px;
+
+    box-shadow: var(--Effect-shadow);
+}
+
+dialog::backdrop {
+    background-color: #00000015;
+    backdrop-filter: blur(2px);
+}
